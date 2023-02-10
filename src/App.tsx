@@ -10,7 +10,7 @@ function App() {
       content: "Votre action a marché"
     })
   }
-  console.log("render")
+  console.log("render app")
   return (
     <div style={{display: "flex", height: "100vh", flexDirection: "column", gap: 8, justifyContent: "center", alignItems: "center"}}>
       <button onClick={handleSubmit}>

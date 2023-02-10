@@ -39,6 +39,7 @@ export function useToast() {
 function Toasts() {
   const [toasts, setToasts] = useState([] as ToastItem[]);
   const {pushToastRef} = useContext(ToastContext);
+  console.count("render toasts")
   pushToastRef.current = ({duration, ...props}) => {
     const id = Date.now();
 
