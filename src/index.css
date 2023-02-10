@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.content-toast {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+.toast {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.toast--default {
+  background-color: #282c34;
+  color: aliceblue;
+}
+
+.toast--danger {
+  background-color: crimson;
+  color: aliceblue;
+}
+
+.toast--success {
+  background-color: chartreuse;
+  color: aliceblue;
+}

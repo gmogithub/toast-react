@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useToast } from "./components/Toast/ToastContext";
+
 
 function App() {
+  const {pushToast} = useToast();
+  const handleSubmit = () => {
+    pushToast({
+      title: "Bravo",
+      content: "Votre action a marché"
+    })
+  }
+  console.log("render")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display: "flex", height: "100vh", flexDirection: "column", gap: 8, justifyContent: "center", alignItems: "center"}}>
+      <button onClick={handleSubmit}>
+        Toast!
+      </button>
+      <button onClick={() => {
+      pushToast({content: "error", type: "danger"})}
+      } >
+        Rapide
+      </button>
     </div>
   );
 }
